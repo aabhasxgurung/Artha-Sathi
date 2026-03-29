@@ -1,7 +1,8 @@
-import { mockUser } from "@/lib/mockData";
+import { mockTransactions, mockUser } from "@/lib/mockData";
 import RecentTransactions from "@/components/RecentTransactions";
 import SpendingCharts from "@/components/SpendingCharts";
 import StatCard from "@/components/StatCard";
+import Link from "next/link";
 
 export default function DashboardPage() {
   return (
@@ -32,7 +33,15 @@ export default function DashboardPage() {
       </div>
       <SpendingCharts />
       <div>
-        <RecentTransactions />
+        <RecentTransactions transactions={mockTransactions.slice(0, 5)} />
+        <div className="flex justify-end mt-2">
+          <Link
+            href="/transactions"
+            className="text-sm text-brand font-medium hover:underline"
+          >
+            View all transactions →
+          </Link>
+        </div>
       </div>
     </div>
   );
