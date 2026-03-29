@@ -1,19 +1,20 @@
 "use client";
 
 import {
-  BadgeDollarSign,
-  Goal,
-  HandCoins,
+  ArrowLeftRight,
   LayoutDashboard,
+  Target,
+  TrendingUp,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Overview", href: "/dashboard", icon: <LayoutDashboard /> },
-  { label: "Transactions", href: "/transactions", icon: <BadgeDollarSign /> },
-  { label: "Budgets", href: "/budgets", icon: <HandCoins /> },
-  { label: "Goals", href: "/goals", icon: <Goal /> },
+  { label: "Transactions", href: "/transactions", icon: <ArrowLeftRight /> },
+
+  { label: "Budgets", href: "/budgets", icon: <Target /> },
+  { label: "Goals", href: "/goals", icon: <TrendingUp /> },
 ];
 
 export default function Sidebar() {
